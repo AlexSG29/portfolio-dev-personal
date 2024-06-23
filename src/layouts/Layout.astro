@@ -22,6 +22,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="px-8 py-2 flex flex-col">
+		<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 		<slot />
 	</body>
 </html>
@@ -38,7 +39,6 @@ const { title } = Astro.props;
 		font-family: "Montserrat", sans-serif;
 		font-optical-sizing: auto;
 		font-style: normal;
-		background-color: hsl(67, 11%, 87%);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -46,6 +46,5 @@ const { title } = Astro.props;
 	body {
 		width: 80rem;
 		height: 100dvh;
-		background-color: hsl(57, 25%, 92%);
 	}
 </style>
