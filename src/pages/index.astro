@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
+import CardProject from '../components/Card-Project.astro';
 ---
 
 <Layout title="Alex Sanchez">
@@ -10,23 +10,51 @@ import Header from '../components/Header.astro';
 		<!-- Top -->
 		<section class="flex flex-row gap-8 h-96">
 			<!-- Col 1 -->
-			<div class="flex flex-1 flex-col justify-center items-start">
-				<h1 class="text-4xl my-5 ">👋Hello! I'm Alexander Sánchez</h1>
-				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Accusamus deserunt quidem nulla similique harum, alias 
-					perferendis et fugit enim vero aliquam, optio, tempore fugiat.
-					Porro ipsam sed rem numquam dicta?
-				</h2>
+			<div class="flex basis-2/3 flex-col justify-center items-start">
+				<div class="my-0  py-0 flex flex-row justify-between w-full items-center">
+					<h1 class="text-4xl font-bold text-gray-700 my-0">Hello! I'm</h1> 
+					<span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+						Disponible para trabajo
+					</span>
+				</div>
+				<h1 class="text-gray-900 text-6xl font-bold mb-8">Alex Sánchez</h1>
+				<p class="text-base font-medium leading-6">Ingeniero enfocado en el desarrollo web 
+					<span class="text-purple-800 font-bold">full-stack</span> 
+					con experiencia en análisis de datos.
+				</p>
 			</div>
 			<!-- Col  -->
-			<div class="flex flex-1 justify-center items-center">
+			<div class="flex basis-1/3 justify-center items-center">
 				<img class="max-w-full max-h-full" src="/images/ReadyPlayerMe-Avatar (2).png" alt="avatar-profile-picture"/>
 			</div>
 		</section>
 		<!-- Projects -->
-		<section>
-			<h1>Projects</h1>
-			<p>Hola</p>
+		<section class="my-10">
+			<h1 class="text-2xl font-bold text-gray-900">Proyectos</h1>
+			<!-- Cards -->
+			<div class="
+				grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4
+				place-items-center
+				">
+				<CardProject 
+				title='Project 1'
+				body='Aqui iria la descripcion del proyecto'
+				href='#'
+				img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+				/>
+				<CardProject 
+				title='Project 2'
+				body='Aqui iria la descripcion del proyecto'
+				href='#'
+				img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+			/>
+			<CardProject 
+				title='Project 3'
+				body='Aqui iria la descripcion del proyecto'
+				href='#'
+				img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+			/>
+			</div>
 		</section>
 	</main>
 

@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+    img: string;
+}
+
+const { href, title, body, img } = Astro.props;
+---
+
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+    <a href={href}>
+        <img class="rounded-t-lg" src={img} alt="Project Image" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title}</h5>
+        </a>
+        <p class="mb-3 text-sm font-normal">{body}</p>
+        </div>
+</div>
+
+<!-- <a href={href}>
+    <h2>
+        {title}
+    </h2>
+    <p>
+        {body}
+    </p>
+</a> -->
