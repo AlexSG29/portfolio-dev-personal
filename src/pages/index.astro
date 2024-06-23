@@ -3,8 +3,46 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		
+<Layout title="Alex Sanchez">
+
+	<header class="flex flex-row justify-between h-16 items-center  ">
+	<!-- Navbar -->
+		<!-- logo -->
+		<p>Logo</p>
+		<!-- items -->
+		<div class="flex flex-row gap-4">
+			<p>About</p>
+			<p>Pyojects</p>
+			<p>Skills</p>
+			<p>Contact</p>
+		</div>
+		<!-- Dark Mode -->
+		<p>Dark Mode</p>
+	</header>
+	<main class="flex flex-col">
+		<!-- Top -->
+		<section class="flex flex-row gap-8 h-96">
+			<!-- Col 1 -->
+			<div class="flex flex-1 flex-col justify-center items-start">
+				<h1 class="text-4xl my-5">👋Hello! I'm Alexander Sánchez</h1>
+				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					Accusamus deserunt quidem nulla similique harum, alias 
+					perferendis et fugit enim vero aliquam, optio, tempore fugiat.
+					Porro ipsam sed rem numquam dicta?
+				</h2>
+			</div>
+			<!-- Col  -->
+			<div class="flex flex-1 justify-center items-center">
+				<img 
+				class="width-full h-auto"
+				src="/images/ReadyPlayerMe-Avatar (2).png"/>
+			</div>
+		</section>
+		<!-- Projects -->
+		<section>
+			<h1>Projects</h1>
+			<p>Hola</p>
+		</section>
 	</main>
+
 </Layout>
