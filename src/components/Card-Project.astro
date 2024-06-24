@@ -10,13 +10,13 @@ const { href, title, body, img } = Astro.props;
 ---
 
 <a
-	href="#"
+	href={href}
 	class="group relative block w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden"
 >
 	<!-- Imagen de fondo -->
 	<img
 		class="object-cover w-full h-full"
-		src="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+		src={img}
 		alt="Imagen de fondo"
 	/>
 
@@ -25,7 +25,7 @@ const { href, title, body, img } = Astro.props;
 		class="absolute inset-x-0 top-0 p-6 bg-gray-800 bg-opacity-50 rounded-t-lg transition-opacity group-hover:opacity-0 group-hover:visible"
 	>
 		<!-- Título de la card -->
-		<h2 class="text-2xl font-bold text-white">Go around the world</h2>
+		<h2 class="text-2xl font-bold text-white">{title}</h2>
 	</div>
 
 	<!-- Contenido que aparece al hacer hover -->
@@ -35,12 +35,11 @@ const { href, title, body, img } = Astro.props;
 		<!-- Fondo semitransparente para resaltar el texto -->
 		<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4">
 			<!-- Título del contenido al hacer hover -->
-			<h3 class="text-2xl font-bold text-gray-800">Go around the world</h3>
+			<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
 
 			<!-- Cuerpo del contenido al hacer hover -->
 			<p class="mt-2 text-base font-normal text-gray-700">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-				praesentium voluptatem omnis atque culpa repellendus.
+				{body}
 			</p>
 
 			<!-- Enlace "Read more" del contenido al hacer hover -->
