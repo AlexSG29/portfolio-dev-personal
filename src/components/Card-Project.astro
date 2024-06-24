@@ -3,23 +3,18 @@ import BadgeCode from "./Badge-Code.astro";
 interface Props {
 	title: string;
 	body: string;
-	href: string;
 	img: string;
+	href_code: string;
 }
 
-const { href, title, body, img } = Astro.props;
+const { title, body, img, href_code } = Astro.props;
 ---
 
-<a
-	href={href}
-	class="group relative block w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden"
+<article
+	class="group relative block w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden cursor-pointer"
 >
 	<!-- Imagen de fondo -->
-	<img
-		class="object-cover w-full h-full"
-		src={img}
-		alt="Imagen de fondo"
-	/>
+	<img class="object-cover w-full h-full" src={img} alt="Imagen de fondo" />
 
 	<!-- Contenido visible de la card -->
 	<div
@@ -30,29 +25,29 @@ const { href, title, body, img } = Astro.props;
 	</div>
 
 	<!-- Contenido que aparece al hacer hover -->
-<div
-    class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
->
-    <!-- Contenido que aparece al hacer hover -->
-<div
-class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
->
-<!-- Fondo semitransparente para resaltar el texto -->
-<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4 relative">
-	<BadgeCode />
-	<!-- Título del contenido al hacer hover -->
-	<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
+	<div
+		class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
+	>
+		<!-- Contenido que aparece al hacer hover -->
+		<div
+			class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
+		>
+			<!-- Fondo semitransparente para resaltar el texto -->
+			<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4 relative">
+				<a href={href_code} class="inline-block">
+					<BadgeCode />
+				</a>
+				<!-- Título del contenido al hacer hover -->
+				<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
 
-	<!-- Cuerpo del contenido al hacer hover -->
-	<p class="mt-2 text-base font-normal text-gray-700">
-		{body}
-	</p>
+				<!-- Cuerpo del contenido al hacer hover -->
+				<p class="mt-2 text-base font-normal text-gray-700">
+					{body}
+				</p>
 
-	<!-- Enlace "Read more" del contenido al hacer hover -->
-	<p class="mt-4 text-sm font-bold text-gray-800">Read more</p>
-</div>
-</div>
-
-</div>
-
-</a>
+				<!-- Enlace "Read more" del contenido al hacer hover -->
+				<p class="mt-4 text-sm font-bold text-gray-800">Read more</p>
+			</div>
+		</div>
+	</div>
+</article>

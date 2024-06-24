@@ -12,14 +12,14 @@ const projects = [
 	{
 		title: "Project 1",
 		body: "Aqui iria la descripcion del proyecto",
-		href: "#",
 		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
+		href_code: "https://github.com",
 	},
 	{
 		title: "Project 2",
 		body: "Aqui iria la descripcion del proyecto",
-		href: "#",
 		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
+		href_code: "https://github.com",
 	},
 ];
 ---
@@ -88,8 +88,8 @@ const projects = [
 						<CardProject
 							title={project.title}
 							body={project.body}
-							href={project.href}
 							img={project.img}
+							href_code={project.href_code}
 						/>
 					))
 				}
