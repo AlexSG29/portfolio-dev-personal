@@ -7,6 +7,7 @@ import GitHubIcon from "../components/icons/GitHub-Icon.astro";
 import MailIcon from "../components/icons/Mail-Icon.astro";
 import TelegramIcon from "../components/icons/Telegram-Icon.astro";
 import DiscordIcon from "../components/icons/Discord-Icon.astro";
+import BadgePreview from "../components/Badge-Preview.astro";
 
 const projects = [
 	{
@@ -14,12 +15,14 @@ const projects = [
 		body: "Aqui iria la descripcion del proyecto",
 		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
 		href_code: "https://github.com",
+		href_preview: "https://lapalabradeldia.com", 
 	},
 	{
 		title: "Project 2",
 		body: "Aqui iria la descripcion del proyecto",
 		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
 		href_code: "https://github.com",
+		href_preview:"https://lapalabradeldia.com", 
 	},
 ];
 ---
@@ -90,6 +93,7 @@ const projects = [
 							body={project.body}
 							img={project.img}
 							href_code={project.href_code}
+							href_preview={project.href_preview}
 						/>
 					))
 				}

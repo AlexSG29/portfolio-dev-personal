@@ -1,13 +1,16 @@
 ---
 import BadgeCode from "./Badge-Code.astro";
+import BadgePreview from "./Badge-Preview.astro";
+
 interface Props {
 	title: string;
 	body: string;
 	img: string;
 	href_code: string;
+	href_preview: string;
 }
 
-const { title, body, img, href_code } = Astro.props;
+const { title, body, img, href_code, href_preview } = Astro.props;
 ---
 
 <article
@@ -34,6 +37,9 @@ const { title, body, img, href_code } = Astro.props;
 		>
 			<!-- Fondo semitransparente para resaltar el texto -->
 			<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4 relative">
+				<a href={href_preview} class="inline-block">
+					<BadgePreview />
+				</a>
 				<a href={href_code} class="inline-block">
 					<BadgeCode />
 				</a>
