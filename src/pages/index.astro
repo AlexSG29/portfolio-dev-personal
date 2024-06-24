@@ -21,19 +21,8 @@ const projects = [
 		href: "#",
 		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
 	},
-	{
-		title: "Project 3",
-		body: "Aqui iria la descripcion del proyecto",
-		href: "#",
-		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
-	},
-	{
-		title: "Project 4",
-		body: "Aqui iria la descripcion del proyecto",
-		href: "#",
-		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
-	}
 ];
+
 ---
 
 <Layout title="Alex Sanchez">
@@ -51,11 +40,8 @@ const projects = [
 					>
 						Disponible para trabajar
 					</span>
-					
 				</button>
-				<h1 class="text-gray-900 text-6xl font-bold mb-8">
-					Alex Sánchez
-				</h1>
+				<h1 class="text-gray-900 text-6xl font-bold mb-8">Alex Sánchez</h1>
 				<p class="text-lg text-gray-800 font-medium leading-6 mb-10">
 					Ingeniero enfocado en el
 					<span class="text-purple-800 font-bold"
@@ -95,10 +81,8 @@ const projects = [
 		<section class="my-10">
 			<h1 class="text-3xl font-bold text-gray-900 mb-10">Proyectos</h1>
 			<!-- Cards -->
-			<div
-				class="flex flex-col gap-4 place-items-center"
-			>
-			<!-- class="grid md:grid-cols-2 sm:grid-cols-1 gap-4
+			<div class="flex flex-col gap-4 place-items-center">
+				<!-- class="grid md:grid-cols-2 sm:grid-cols-1 gap-4
         place-items-center" -->
 				{
 					projects.map((project) => (
@@ -112,7 +96,5 @@ const projects = [
 				}
 			</div>
 		</section>
-
-		
 	</main>
 </Layout>
