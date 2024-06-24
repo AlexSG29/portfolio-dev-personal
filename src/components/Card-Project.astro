@@ -1,4 +1,5 @@
 ---
+import BadgeCode from "./Badge-Code.astro";
 interface Props {
 	title: string;
 	body: string;
@@ -29,21 +30,29 @@ const { href, title, body, img } = Astro.props;
 	</div>
 
 	<!-- Contenido que aparece al hacer hover -->
-	<div
-		class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
-	>
-		<!-- Fondo semitransparente para resaltar el texto -->
-		<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4">
-			<!-- Título del contenido al hacer hover -->
-			<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
+<div
+    class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
+>
+    <!-- Contenido que aparece al hacer hover -->
+<div
+class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
+>
+<!-- Fondo semitransparente para resaltar el texto -->
+<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4 relative">
+	<BadgeCode />
+	<!-- Título del contenido al hacer hover -->
+	<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
 
-			<!-- Cuerpo del contenido al hacer hover -->
-			<p class="mt-2 text-base font-normal text-gray-700">
-				{body}
-			</p>
+	<!-- Cuerpo del contenido al hacer hover -->
+	<p class="mt-2 text-base font-normal text-gray-700">
+		{body}
+	</p>
 
-			<!-- Enlace "Read more" del contenido al hacer hover -->
-			<p class="mt-4 text-sm font-bold text-gray-800">Read more</p>
-		</div>
-	</div>
+	<!-- Enlace "Read more" del contenido al hacer hover -->
+	<p class="mt-4 text-sm font-bold text-gray-800">Read more</p>
+</div>
+</div>
+
+</div>
+
 </a>
