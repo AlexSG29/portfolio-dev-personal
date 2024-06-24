@@ -1,15 +1,72 @@
 ---
 interface Props {
-    title: string;
-    body: string;
-    href: string;
-    img: string;
+	title: string;
+	body: string;
+	href: string;
+	img: string;
 }
 
 const { href, title, body, img } = Astro.props;
 ---
 
-<div class="max-w-fit min-h-[500px] bg-white border border-gray-200 rounded-lg shadow">
+<a
+	href="#"
+	class="group relative block h-64 sm:h-80 lg:h-96 bg-gray-100 rounded-lg shadow-lg overflow-hidden"
+>
+	<!-- Borde punteado que rodea toda la card -->
+	<span class="absolute inset-0 border-2 border-dashed border-gray-300"></span>
+
+	<!-- Contenedor principal de la card -->
+	<div
+		class="relative flex h-full items-end bg-white rounded-lg overflow-hidden transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
+	>
+		<!-- Contenido visible de la card -->
+		<div
+			class="p-6 transition-opacity group-hover:absolute group-hover:opacity-0"
+		>
+			<!-- Icono en la parte superior izquierda -->
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="w-10 h-10 sm:w-12 sm:h-12 text-gray-400"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+				></path>
+			</svg>
+
+			<!-- Título de la card -->
+			<h2 class="mt-4 text-2xl font-bold text-gray-800">Go around the world</h2>
+		</div>
+
+		<!-- Contenido que aparece al hacer hover -->
+		<div
+			class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100"
+		>
+			<!-- Fondo semitransparente para resaltar el texto -->
+			<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4">
+				<!-- Título del contenido al hacer hover -->
+				<h3 class="text-2xl font-bold text-gray-800">Go around the world</h3>
+
+				<!-- Cuerpo del contenido al hacer hover -->
+				<p class="mt-2 text-base font-normal text-gray-700">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+					praesentium voluptatem omnis atque culpa repellendus.
+				</p>
+
+				<!-- Enlace "Read more" del contenido al hacer hover -->
+				<p class="mt-4 text-sm font-bold text-gray-800">Read more</p>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- <div class="max-w-fit min-h-[500px] bg-white border border-gray-200 rounded-lg shadow">
     <a href={href}>
         <img class="rounded-t-lg" src={img} alt="Project Image" />
     </a>
@@ -21,4 +78,4 @@ const { href, title, body, img } = Astro.props;
         </a>
         <p class="mb-3 text-sm font-normal">{body}</p>
     </div>
-</div>
+</div> -->

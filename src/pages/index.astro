@@ -51,6 +51,7 @@ const projects = [
 					>
 						Disponible para trabajar
 					</span>
+					
 				</button>
 				<h1 class="text-gray-900 text-6xl font-bold mb-8">
 					Alex Sánchez
@@ -95,9 +96,10 @@ const projects = [
 			<h1 class="text-3xl font-bold text-gray-900 mb-10">Proyectos</h1>
 			<!-- Cards -->
 			<div
-				class="grid md:grid-cols-2 sm:grid-cols-1 gap-4
-        place-items-center"
+				class="flex flex-col gap-4 place-items-center"
 			>
+			<!-- class="grid md:grid-cols-2 sm:grid-cols-1 gap-4
+        place-items-center" -->
 				{
 					projects.map((project) => (
 						<CardProject
@@ -110,5 +112,7 @@ const projects = [
 				}
 			</div>
 		</section>
+
+		
 	</main>
 </Layout>
