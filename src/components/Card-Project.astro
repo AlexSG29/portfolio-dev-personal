@@ -36,13 +36,15 @@ const { title, body, img, href_code, href_preview } = Astro.props;
 			class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
 		>
 			<!-- Fondo semitransparente para resaltar el texto -->
-			<div class="bg-gray-100 bg-opacity-75 rounded-lg p-4 relative">
-				<a href={href_preview} class="inline-block">
-					<BadgePreview />
-				</a>
-				<a href={href_code} class="inline-block">
-					<BadgeCode />
-				</a>
+			<div class="bg-gray-100 bg-opacity-75 rounded-lg p-3 relative">
+				<div class="flex flex-row gap-4 justify-start items-center">
+					<a href={href_preview} class="inline-block">
+						<BadgePreview />
+					</a>
+					<a href={href_code} class="inline-block">
+						<BadgeCode />
+					</a>
+				</div>
 				<!-- Título del contenido al hacer hover -->
 				<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
 
