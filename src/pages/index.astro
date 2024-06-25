@@ -7,24 +7,27 @@ import GitHubIcon from "../components/icons/GitHub-Icon.astro";
 import MailIcon from "../components/icons/Mail-Icon.astro";
 import TelegramIcon from "../components/icons/Telegram-Icon.astro";
 import DiscordIcon from "../components/icons/Discord-Icon.astro";
+import BadgeCode from "../components/Badge-Code.astro";
 import BadgePreview from "../components/Badge-Preview.astro";
+import DjangoBadge from "../components/tech-badges/Django-Badge.astro";
+import JsBadge from "../components/tech-badges/Js-Badge.astro";
 
-const projects = [
+/* const projects = [
 	{
 		title: "Project 1",
 		body: "Aqui iria la descripcion del proyecto",
 		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
 		href_code: "https://github.com",
-		href_preview: "https://lapalabradeldia.com", 
+		href_preview: "https://lapalabradeldia.com",
 	},
 	{
 		title: "Project 2",
 		body: "Aqui iria la descripcion del proyecto",
 		img: "https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ",
 		href_code: "https://github.com",
-		href_preview:"https://lapalabradeldia.com", 
+		href_preview:"https://lapalabradeldia.com",
 	},
-];
+]; */
 ---
 
 <Layout title="Alex Sanchez">
@@ -84,19 +87,20 @@ const projects = [
 			<h1 class="text-3xl font-bold text-gray-900 mb-10">Proyectos</h1>
 			<!-- Cards -->
 			<div class="flex flex-col gap-4 place-items-center">
-				<!-- class="grid md:grid-cols-2 sm:grid-cols-1 gap-4
-        place-items-center" -->
-				{
-					projects.map((project) => (
-						<CardProject
-							title={project.title}
-							body={project.body}
-							img={project.img}
-							href_code={project.href_code}
-							href_preview={project.href_preview}
-						/>
-					))
-				}
+				<CardProject
+					title="Project 1"
+					body="Aqui iria la descripcion del proyecto"
+					img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+					href_code="https://github.com"
+					href_preview="https://lapalabradeldia.com"
+					>
+					<BadgePreview slot="preview"/>
+					<BadgeCode slot="code"/>
+					<slot slot="technologies">
+						<DjangoBadge />
+						<JsBadge />
+					</slot>
+				</CardProject>
 			</div>
 		</section>
 	</main>
