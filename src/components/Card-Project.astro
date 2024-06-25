@@ -40,11 +40,11 @@ const { title, body, img, href_code, href_preview } = Astro.props;
         {body}
       </p>
 			<!-- Slot for used technologies -->
-			<div class="mt-4">
-				<slot name="technologies">
-					<!-- Components for used technologies can be added here as needed -->
-				</slot>
-			</div>
+      <div class="mt-4 flex flex-wrap gap-4">
+        <slot name="technologies">
+          <!-- Components for used technologies can be added here as needed -->
+        </slot>
+      </div>
     </div>
   </div>
 </article>
