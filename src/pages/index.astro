@@ -1,90 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import CardProject from "../components/Card-Project.astro";
-import BadgesInfo from "../components/Badges-Info.astro";
-import GitHubIcon from "../components/icons/GitHub-Icon.astro";
-import MailIcon from "../components/icons/Mail-Icon.astro";
-import TelegramIcon from "../components/icons/Telegram-Icon.astro";
-import DiscordIcon from "../components/icons/Discord-Icon.astro";
-import BadgeCode from "../components/Badge-Code.astro";
-import BadgePreview from "../components/Badge-Preview.astro";
-import DjangoBadge from "../components/tech-badges/Django-Badge.astro";
-import JsBadge from "../components/tech-badges/Js-Badge.astro";
+import MainTop from "../components/Main-Top.astro";
+import Proyects from "../components/Proyects.astro";
 ---
 
 <Layout title="Alex Sanchez">
 	<Header />
 	<main class="flex flex-col">
-		<!-- Top -->
-		<section class="flex flex-row gap-8 h-96">
-			<!-- Col 1 -->
-			<div class="flex basis-2/3 flex-col justify-center items-start">
-				<button
-					class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs font-medium text-gray-900 rounded-2xl group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 focus:ring-4 focus:outline-none focus:ring-lime-200"
-				>
-					<span
-						class="px-2 py-1 bg-gray-100 rounded-2xl overflow-hidden hover:bg-inherit"
-					>
-						Disponible para trabajar
-					</span>
-				</button>
-				<h1 class="text-gray-900 text-6xl font-bold mb-8">Alex Sánchez</h1>
-				<p class="text-lg text-gray-800 font-medium leading-6 mb-10">
-					Ingeniero enfocado en el
-					<span class="text-purple-800 font-bold"
-						>Desarrollo Web Full Stack</span
-					>
-					con experiencia en análisis de datos.
-				</p>
-				<div class="flex flex-row gap-x-4 gap-y-3 flex-wrap">
-					<BadgesInfo href="#">
-						<MailIcon />
-						Mándame un correo
-					</BadgesInfo>
-					<BadgesInfo href="#">
-						<GitHubIcon />
-						GitHub
-					</BadgesInfo>
-					<BadgesInfo href="#">
-						<TelegramIcon />
-						Contáctame
-					</BadgesInfo>
-					<BadgesInfo href="#">
-						<DiscordIcon />
-						Discord
-					</BadgesInfo>
-				</div>
-			</div>
-			<!-- Col 2 -->
-			<div class="flex basis-1/3 justify-center items-center">
-				<img
-					class="max-w-full max-h-full rounded-full"
-					src="/images/ReadyPlayerMe-Avatar (2).png"
-					alt="avatar-profile-picture"
-				/>
-			</div>
-		</section>
-		<!-- Projects -->
-		<section class="my-10">
-			<h1 class="text-3xl font-bold text-gray-900 mb-10">Proyectos</h1>
-			<!-- Cards -->
-			<div class="flex flex-col gap-4 place-items-center">
-				<CardProject
-					title="Project 1"
-					body="Aqui iria la descripcion del proyecto"
-					img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
-					href_code="https://github.com"
-					href_preview="https://lapalabradeldia.com"
-					>
-					<BadgePreview slot="preview"/>
-					<BadgeCode slot="code"/>
-					<slot slot="technologies">
-						<DjangoBadge />
-						<JsBadge />
-					</slot>
-				</CardProject>
-			</div>
-		</section>
+		<MainTop />
+		<Proyects />
 	</main>
 </Layout>

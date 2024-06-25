@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
   body: string;
   img: string;
   href_code: string;
@@ -11,26 +11,32 @@ const { title, body, img, href_code, href_preview } = Astro.props;
 ---
 
 <!-- CardProject.astro -->
-<article class="group relative block w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden cursor-pointer">
+<article
+  class="group relative block w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden cursor-pointer"
+>
   <!-- Background image -->
   <img class="object-cover w-full h-full" src={img} alt="Background image" />
 
   <!-- Visible content of the card -->
-  <div class="absolute inset-x-0 top-0 p-6 bg-gray-800 bg-opacity-50 rounded-t-lg transition-opacity group-hover:opacity-0 group-hover:visible">
+  <div
+    class="absolute inset-x-0 top-0 p-6 bg-gray-800 bg-opacity-50 rounded-t-lg transition-opacity group-hover:opacity-0 group-hover:visible"
+  >
     <!-- Card title -->
     <h2 class="text-2xl font-bold text-white">{title}</h2>
   </div>
 
   <!-- Content shown on hover -->
-  <div class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100">
+  <div
+    class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
+  >
     <!-- Semitransparent background to highlight text -->
     <div class="bg-gray-100 bg-opacity-75 rounded-lg p-3 relative">
       <!-- Flex container for preview and code badges -->
       <div class="flex flex-row gap-4 justify-start items-center">
         <!-- Slot for Preview badge -->
-        <a href={href_preview}><slot name="preview"></slot></a>
+        <a href={href_preview}><slot name="preview" /></a>
         <!-- Slot for Code badge -->
-        <a href={href_code}><slot name="code"></slot></a>
+        <a href={href_code}><slot name="code" /></a>
       </div>
       <!-- Title of the content on hover -->
       <h3 class="text-2xl font-bold text-gray-800">{title}</h3>
@@ -39,7 +45,7 @@ const { title, body, img, href_code, href_preview } = Astro.props;
       <p class="mt-2 text-base font-normal text-gray-700">
         {body}
       </p>
-			<!-- Slot for used technologies -->
+      <!-- Slot for used technologies -->
       <div class="mt-4 flex flex-wrap gap-4">
         <slot name="technologies">
           <!-- Components for used technologies can be added here as needed -->
