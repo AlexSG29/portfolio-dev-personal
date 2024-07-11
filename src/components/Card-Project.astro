@@ -12,7 +12,7 @@ const { title, body, img, href_code, href_preview } = Astro.props;
 
 <!-- CardProject.astro -->
 <article
-  class="group relative block w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden cursor-pointer"
+  class="group relative block h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden cursor-pointer"
 >
   <!-- Background image -->
   <img class="object-cover w-full h-full" src={img} alt="Background image" />
@@ -27,7 +27,7 @@ const { title, body, img, href_code, href_preview } = Astro.props;
 
   <!-- Content shown on hover -->
   <div
-    class="absolute inset-0 p-6 opacity-0 transition-opacity group-hover:opacity-100"
+    class="absolute inset-0 p-10 opacity-0 transition-opacity group-hover:opacity-100"
   >
     <!-- Semitransparent background to highlight text -->
     <div class="bg-gray-100 bg-opacity-70 rounded-lg p-3 relative">
