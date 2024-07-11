@@ -1,17 +1,104 @@
 ---
+// Imports Badges
+import BadgeTemplate from "./badges/Badge-Template.astro"
+// Imports Icons
+import PythonIcon from "./icons/Python-Icon.astro"
+import JsIcon from "./icons/Js-Icon.astro"
+import HTMLIcon from "./icons/HTML-Icon.astro"
+import CSSIcon from "./icons/CSS-Icon.astro"
+import AstroIcon from "./icons/Astro-Icon.astro"
+import BootsTrapIcon from "./icons/BootsTrap-Icon.astro"
+import ReactIcon from "./icons/React-Icon.astro"
+import NextIcon from "./icons/NextJs-Icon.astro"
+import DjangoIcon from "./icons/Django-Icon.astro"
+import DockerIcon from "./icons/Docker-Icon.astro"
+import GitIcon from "./icons/Git-Icon.astro"
+import KotlinIcon from "./icons/Kotlin-Icon.astro"
+import VSCodeIcon from "./icons/VsCode-Icon.astro"
+import NodeJsIcon from "./icons/NodeJs-Icon.astro"
+import SassIcon from "./icons/Sass-Icon.astro"
+import TailwindIcon from "./icons/Tailwind-Icon.astro"
+import ViteIcon from "./icons/Vite-Icon.astro"
+import GitHubIcon from "./icons/GitHub-Icon.astro"
+
+
 ---
 
-<section>
+<section class="mb-20">
   <h1 class="text-3xl font-bold text-gray-900 mb-10">Habilidades</h1>
   <div class="flex flex-row items-stretch">
     <img class="flex-1 object-contain w-8" src="images/ReadyPlayerMe-Avatar.png" alt="Avatar-stand-image">
-    <div class="flex flex-1 flex-col items-start justify-center">
-      <p>Lenguajes</p>
-      <p>FrameWorks</p>
+    <div class="flex flex-1 flex-col items-start justify-center font-medium text-base">
+      <p>Lenguajes y Tecnologías</p>
+      <div class="flex flex-row gap-3 flex-wrap mb-3">
+        <BadgeTemplate className="bg-blue-100 text-blue-900">
+          <PythonIcon /> Python
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-yellow-100 text-yellow-900">
+          <JsIcon /> JavaScript
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-orange-100 text-orange-900">
+          <HTMLIcon /> HTML
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-indigo-100 text-indigo-900">
+          <CSSIcon /> CSS
+        </BadgeTemplate>  
+      </div>
 
+      <p>FrameWorks</p>
+      <div class="flex flex-row gap-3 flex-wrap mb-3">
+        <BadgeTemplate className="bg-green-100 text-green-900">
+          <DjangoIcon /> Django
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-cyan-100 text-cyan-900">
+          <TailwindIcon /> Tailwind
+        </BadgeTemplate> 
+        <BadgeTemplate className="bg-violet-100 text-violet-900">
+          <BootsTrapIcon /> Bootstrap
+        </BadgeTemplate> 
+        <BadgeTemplate className="bg-pink-100 text-pink-900">
+          <SassIcon /> Sass
+        </BadgeTemplate> 
+        <BadgeTemplate className="bg-fuchsia-100 text-fuchsia-900">
+          <AstroIcon /> Astro
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-purple-100 text-purple-900">
+          <ViteIcon /> Vite
+        </BadgeTemplate>
+      </div>
+      
       <p>Herramientas</p>
-      <p>Bases de Datos</p>
+      <div class="flex flex-row gap-3 flex-wrap mb-3">
+        <BadgeTemplate className="bg-orange-100 text-orange-900">
+          <GitIcon /> Git
+        </BadgeTemplate> 
+        <BadgeTemplate className="bg-gray-100 text-gray-900">
+          <GitHubIcon /> GitHub
+        </BadgeTemplate> 
+        <BadgeTemplate className="bg-sky-100 text-sky-900">
+          <DockerIcon /> Docker
+        </BadgeTemplate> 
+        <BadgeTemplate className="bg-lime-100 text-lime-900">
+          <NodeJsIcon /> Node.js
+        </BadgeTemplate> 
+        <BadgeTemplate className="bg-indigo-100 text-indigo-900">
+          <VSCodeIcon /> VS Code
+        </BadgeTemplate> 
+      </div>
+
       <p>Actualmente Aprendiendo</p>
+      <div class="flex flex-row gap-3 flex-wrap mb-3">
+        <BadgeTemplate className="bg-sky-100 text-sky-900">
+          <ReactIcon /> React
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-rose-100 text-rose-900">
+          <KotlinIcon /> Kotlin
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-stone-100 text-stone-900">
+          <NextIcon /> Next
+        </BadgeTemplate>
+      </div>
+      
     </div>
   </div>
 </section>
