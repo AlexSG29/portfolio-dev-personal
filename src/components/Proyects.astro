@@ -9,26 +9,139 @@ import JsBadge from "./badges/Js-Badge.astro";
 <!-- Projects -->
 <section class="my-10">
   <h1 class="text-3xl font-bold text-gray-900 mb-10">Proyectos</h1>
-  <!-- Cards -->
-  <div class="flex flex-col gap-4 place-items-center">
-    <CardProject
-      title="Project 1"
-      body={`Aquí va la descripción del proyecto. 
-        Puedes escribir en varias líneas usando el 
-        operador de interpolación de cadenas (backticks) 
-        en JavaScript. Esto permite una mayor legibilidad 
-        y organización del texto.
-        `}
-      img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
-      href_code="https://github.com"
-      href_preview="https://lapalabradeldia.com"
+  <!-- Carrusel -->
+  <div id="projectCarousel" class="relative overflow-hidden">
+    <!-- Contenedor de proyectos -->
+    <div
+      id="projectContainer"
+      class="flex transition-transform duration-300 ease-in-out"
+    >
+      <!-- Proyecto 1 -->
+      <div class="w-full flex-none">
+        <CardProject
+          title="Project 1"
+          body={`Aquí va la descripción del proyecto. 
+          Puedes escribir en varias líneas usando el 
+          operador de interpolación de cadenas (backticks) 
+          en JavaScript. Esto permite una mayor legibilidad 
+          y organización del texto.
+          `}
+          img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+          href_code="https://github.com"
+          href_preview="https://lapalabradeldia.com"
+        >
+          <BadgePreview slot="preview" />
+          <BadgeCode slot="code" />
+          <slot slot="technologies">
+            <DjangoBadge />
+            <JsBadge />
+          </slot>
+        </CardProject>
+      </div>
+      <!-- Proyecto 2 -->
+      <div class="w-full flex-none">
+        <CardProject
+          title="Project 2"
+          body={`Aquí va la descripción del proyecto. 
+            Puedes escribir en varias líneas usando el 
+            operador de interpolación de cadenas (backticks) 
+            en JavaScript. Esto permite una mayor legibilidad 
+            y organización del texto.
+            `}
+          img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+          href_code="https://github.com"
+          href_preview="https://lapalabradeldia.com"
+        >
+          <BadgePreview slot="preview" />
+          <BadgeCode slot="code" />
+          <slot slot="technologies">
+            <DjangoBadge />
+            <JsBadge />
+          </slot>
+        </CardProject>
+      </div>
+      <!-- Proyecto 3 -->
+      <div class="w-full flex-none">
+        <CardProject
+          title="Project 3"
+          body={`Aquí va la descripción del proyecto. 
+          Puedes escribir en varias líneas usando el 
+          operador de interpolación de cadenas (backticks) 
+          en JavaScript. Esto permite una mayor legibilidad 
+          y organización del texto.
+          `}
+          img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+          href_code="https://github.com"
+          href_preview="https://lapalabradeldia.com"
+        >
+          <BadgePreview slot="preview" />
+          <BadgeCode slot="code" />
+          <slot slot="technologies">
+            <DjangoBadge />
+            <JsBadge />
+          </slot>
+        </CardProject>
+      </div>
+    </div>
+    <!-- Fin Contenedor de proyectos -->
+
+    <!-- Botón Anterior -->
+    <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
+      <button
+        id="prevBtn"
+        class="bg-gray-800 text-white px-3 py-1 rounded-md focus:outline-none hover:bg-gray-700"
       >
-      <BadgePreview slot="preview"/>
-      <BadgeCode slot="code"/>
-      <slot slot="technologies">
-        <DjangoBadge />
-        <JsBadge />
-      </slot>
-    </CardProject>
+        a
+      </button>
+    </div>
+    <!-- Botón Siguiente -->
+    <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+      <button
+        id="nextBtn"
+        class="bg-gray-800 text-white px-3 py-1 rounded-md focus:outline-none hover:bg-gray-700"
+      >
+        n
+      </button>
+    </div>
   </div>
 </section>
+
+<script>
+  // Variables para el carrusel
+  const projectContainer = document.getElementById("projectContainer");
+  const projects = Array.from(projectContainer.children);
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let currentIndex = 0;
+  const totalProjects = projects.length;
+
+  // Función para mover el carrusel a la izquierda
+  function moveLeft() {
+    currentIndex = (currentIndex - 1 + totalProjects) % totalProjects;
+    updateCarousel();
+  }
+
+  // Función para mover el carrusel a la derecha
+  function moveRight() {
+    currentIndex = (currentIndex + 1) % totalProjects;
+    updateCarousel();
+  }
+
+  // Actualiza la posición del carrusel según currentIndex
+  function updateCarousel() {
+    const projectWidth = projects[currentIndex].getBoundingClientRect().width;
+    const newPosition = -currentIndex * projectWidth;
+
+    // Aplicar transición suave al cambiar la posición
+    projectContainer.style.transition = "transform 0.45s ease-in-out";
+    projectContainer.style.transform = `translateX(${newPosition}px)`;
+  }
+
+  // Mostrar el primer proyecto al inicio
+  updateCarousel();
+
+  // Event listeners para los botones de navegación
+  prevBtn.addEventListener("click", moveLeft);
+  nextBtn.addEventListener("click", moveRight);
+</script>
