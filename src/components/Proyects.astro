@@ -1,11 +1,16 @@
 ---
+// Import main component
 import CardProject from "./Card-Project.astro";
+// Imports Badges
 import BadgeCode from "./badges/Badge-Code.astro";
 import BadgePreview from "./badges/Badge-Preview.astro";
-import DjangoBadge from "./badges/Django-Badge.astro";
-import JsBadge from "./badges/Js-Badge.astro";
+import BadgeTemplate from "./badges/Badge-Template.astro";
+// Imports Icons
 import NextButtonIcon from "./icons/NextButton-Icon.astro";
 import BeforeButtonIcon from "./icons/BeforeButton-Icon.astro";
+import DjangoIcon from "./icons/Django-Icon.astro";
+import JsIcon from "./icons/Js-Icon.astro";
+
 ---
 
 <!-- Projects -->
@@ -35,8 +40,12 @@ import BeforeButtonIcon from "./icons/BeforeButton-Icon.astro";
           <BadgePreview slot="preview" />
           <BadgeCode slot="code" />
           <slot slot="technologies">
-            <DjangoBadge />
-            <JsBadge />
+            <BadgeTemplate className="bg-green-100 text-green-900">
+              <DjangoIcon /> Django
+            </BadgeTemplate>
+            <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+              <JsIcon /> Java Script
+            </BadgeTemplate>
           </slot>
         </CardProject>
       </div>
@@ -57,8 +66,6 @@ import BeforeButtonIcon from "./icons/BeforeButton-Icon.astro";
           <BadgePreview slot="preview" />
           <BadgeCode slot="code" />
           <slot slot="technologies">
-            <DjangoBadge />
-            <JsBadge />
           </slot>
         </CardProject>
       </div>
@@ -79,8 +86,6 @@ import BeforeButtonIcon from "./icons/BeforeButton-Icon.astro";
           <BadgePreview slot="preview" />
           <BadgeCode slot="code" />
           <slot slot="technologies">
-            <DjangoBadge />
-            <JsBadge />
           </slot>
         </CardProject>
       </div>
