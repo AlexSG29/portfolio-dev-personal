@@ -4,6 +4,8 @@ import BadgeCode from "./badges/Badge-Code.astro";
 import BadgePreview from "./badges/Badge-Preview.astro";
 import DjangoBadge from "./badges/Django-Badge.astro";
 import JsBadge from "./badges/Js-Badge.astro";
+import NextButtonIcon from "./icons/NextButton-Icon.astro";
+import BeforeButtonIcon from "./icons/BeforeButton-Icon.astro";
 ---
 
 <!-- Projects -->
@@ -89,18 +91,18 @@ import JsBadge from "./badges/Js-Badge.astro";
     <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
       <button
         id="prevBtn"
-        class="bg-gray-800 text-white px-3 py-1 rounded-md focus:outline-none hover:bg-gray-700"
+        class="bg-gray-800 text-white focus:outline-none hover:bg-gray-700 px-1 py-3"
       >
-        a
+        <BeforeButtonIcon />  
       </button>
     </div>
     <!-- Botón Siguiente -->
     <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
       <button
         id="nextBtn"
-        class="bg-gray-800 text-white px-3 py-1 rounded-md focus:outline-none hover:bg-gray-700"
+        class="bg-gray-800 text-white focus:outline-none hover:bg-gray-700 px-1 py-3"
       >
-        n
+        <NextButtonIcon />
       </button>
     </div>
   </div>
