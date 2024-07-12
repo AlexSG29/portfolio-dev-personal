@@ -1,4 +1,7 @@
 ---
+// Import Image component
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   body: string;
@@ -15,7 +18,7 @@ const { title, body, img, href_code, href_preview } = Astro.props;
   class="group relative block h-64 sm:h-80 lg:h-96 rounded-lg shadow-lg overflow-hidden cursor-pointer"
 >
   <!-- Background image -->
-  <img class="object-cover w-full h-full" src={img} alt="Background-proyect-card" />
+  <Image src={img} alt="Background-proyect-card" class="object-cover w-full h-full" loading="lazy" width="400" height="400"/>
 
   <!-- Visible content of the card with blur effect -->
     <div class="absolute inset-x-0 top-0 p-4 bg-gray-800 bg-opacity-30 backdrop-blur-lg rounded-t-lg transition-opacity group-hover:opacity-0 group-hover:visible">
