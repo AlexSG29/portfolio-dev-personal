@@ -4,6 +4,9 @@ import MailIcon from "./icons/Mail-Icon.astro";
 import TelegramIcon from "./icons/Telegram-Icon.astro";
 import GitHubIcon from "./icons/GitHub-Icon.astro";
 import DiscordIcon from "./icons/Discord-Icon.astro";
+//Import Images
+import ProfileAvatar1 from "../images/ReadyPlayerMe-Avatar (2).png";
+import { Image } from "astro:assets";
 ---
 <!-- Top -->
 <section class="flex flex-row gap-8 h-96">
@@ -47,10 +50,6 @@ import DiscordIcon from "./icons/Discord-Icon.astro";
   </div>
   <!-- Col 2 -->
   <div class="flex basis-1/3 justify-center items-center">
-    <img
-      class="max-w-full max-h-full rounded-full"
-      src="/images/ReadyPlayerMe-Avatar (2).png"
-      alt="avatar-profile-picture"
-    />
+    <Image src={ProfileAvatar1} alt="Avatar-profile" width="400" class="rounded-full"/>
   </div>
 </section>

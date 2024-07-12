@@ -20,14 +20,15 @@ import SassIcon from "./icons/Sass-Icon.astro"
 import TailwindIcon from "./icons/Tailwind-Icon.astro"
 import ViteIcon from "./icons/Vite-Icon.astro"
 import GitHubIcon from "./icons/GitHub-Icon.astro"
-
-
+// Imports Images
+import ProfileAvatar2 from "../images/ReadyPlayerMe-Avatar.png";
+import { Image } from "astro:assets"
 ---
 
 <section class="mb-20">
   <h1 class="text-3xl font-bold text-gray-900 mb-10">Habilidades</h1>
   <div class="flex flex-row items-stretch">
-    <img class="flex-1 object-contain w-8" src="images/ReadyPlayerMe-Avatar.png" alt="Avatar-stand-image">
+    <Image src={ProfileAvatar2} alt="Avatar-profile-stand-3d" class="flex-1 object-contain w-8"/>
     <div class="flex flex-1 flex-col items-start justify-center font-medium text-base">
       <p>Lenguajes y Tecnologías</p>
       <div class="flex flex-row gap-3 flex-wrap mb-3">
@@ -38,10 +39,10 @@ import GitHubIcon from "./icons/GitHub-Icon.astro"
           <JsIcon /> JavaScript
         </BadgeTemplate>
         <BadgeTemplate className="bg-orange-100 text-orange-900">
-          <HTMLIcon /> HTML
+          <HTMLIcon /> HTML5
         </BadgeTemplate>
         <BadgeTemplate className="bg-indigo-100 text-indigo-900">
-          <CSSIcon /> CSS
+          <CSSIcon /> CSS3
         </BadgeTemplate>  
       </div>
 
