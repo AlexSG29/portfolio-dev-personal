@@ -6,10 +6,10 @@ import BadgeCode from "./badges/Badge-Code.astro";
 import BadgePreview from "./badges/Badge-Preview.astro";
 import BadgeTemplate from "./badges/Badge-Template.astro";
 // Imports Icons
-import NextButtonIcon from "./icons/NextButton-Icon.astro";
-import BeforeButtonIcon from "./icons/BeforeButton-Icon.astro";
 import DjangoIcon from "./icons/Django-Icon.astro";
 import JsIcon from "./icons/Js-Icon.astro";
+// Imports Images
+import Project1_WEB from "/public/login.webp";
 
 ---
 
@@ -17,12 +17,9 @@ import JsIcon from "./icons/Js-Icon.astro";
 <section class="my-10">
   <h1 class="text-3xl font-bold text-gray-900 mb-10">Proyectos</h1>
   <!-- Carrusel -->
-  <div id="projectCarousel" class="relative overflow-hidden">
+  <div class="relative overflow-hidden">
     <!-- Contenedor de proyectos -->
-    <div
-      id="projectContainer"
-      class="flex transition-transform duration-300 ease-in-out"
-    >
+    <div id="projectContainer" class="flex transition-transform duration-300 ease-in-out">
       <!-- Proyecto 1 -->
       <div class="w-full flex-none">
         <CardProject
@@ -33,7 +30,7 @@ import JsIcon from "./icons/Js-Icon.astro";
           en JavaScript. Esto permite una mayor legibilidad 
           y organización del texto.
           `}
-          img="https://www.pap.pl/sites/default/files/styles/main_image/public/202306/pap_20221218_2FS.jpg?h=14531cb3&itok=1LEK6_AJ"
+          img= {Project1_WEB}
           href_code="https://github.com"
           href_preview="https://lapalabradeldia.com"
         >
@@ -92,23 +89,23 @@ import JsIcon from "./icons/Js-Icon.astro";
     </div>
     <!-- Fin Contenedor de proyectos -->
 
-    <!-- Botón Anterior -->
-    <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
-      <button
-        id="prevBtn"
-        class="bg-gray-800 text-white focus:outline-none hover:bg-gray-700 px-1 py-3"
-      >
-        <BeforeButtonIcon />  
-      </button>
-    </div>
-    <!-- Botón Siguiente -->
-    <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
-      <button
-        id="nextBtn"
-        class="bg-gray-800 text-white focus:outline-none hover:bg-gray-700 px-1 py-3"
-      >
-        <NextButtonIcon />
-      </button>
+    <!-- Slider controls -->
+    <!-- Previous Card -->
+    <button id="prevBtn" type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+          <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+          </svg>
+      </span>
+  </button>
+  <!-- Next Card -->
+  <button id="nextBtn" type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+          <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+          </svg>
+      </span>
+  </button>
     </div>
   </div>
 </section>
