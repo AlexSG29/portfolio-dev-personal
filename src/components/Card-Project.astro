@@ -13,18 +13,21 @@ interface Props {
 const { title, body, img, href_code, href_preview } = Astro.props;
 ---
 
-<!-- Card title -->
-<h2 class="p-3 text-2xl my-0 font-bold text-gray-100 bg-gray-800 rounded-t-md">
-  {title}
-</h2>
+
 <!-- Card content -->
-<article class="border-red-500 group relative shadow-lg cursor-pointer flex flex-col">
-  <!-- Background project image -->
-  <img src={img} alt="Background-proyect-card" />
+<article class="group relative shadow-lg cursor-auto flex flex-col">
+  <!-- Card title -->
+  <h2 class="px-5 py-3 text-2xl my-0 font-bold text-gray-100 bg-gray-800 rounded-t-md">
+    {title}
+  </h2>
+  <!-- Background project image container with fixed height -->
+  <div class="h-96 w-full overflow-hidden bg-gray-200 rounded-b-md">
+    <img src={img} alt="Background-proyect-card" class="w-full h-full object-cover" />
+  </div>
 
   <div class="absolute inset-0 p-10 opacity-0 transition-opacity group-hover:opacity-100">
     <!-- Semitransparent background to highlight text -->
-    <div class="bg-gray-100 bg-opacity-90 rounded-lg p-3 relative">
+    <div class="bg-gray-100 bg-opacity-90 rounded-lg p-3 mt-10 relative">
       <!-- Flex container for preview and code badges -->
       <div class="flex flex-row gap-4 justify-start items-center">
         <!-- Slot for Preview badge -->
@@ -47,6 +50,6 @@ const { title, body, img, href_code, href_preview } = Astro.props;
       </div>
     </div>
   </div>
-
   <!-- Content shown on hover -->
 </article>
+
