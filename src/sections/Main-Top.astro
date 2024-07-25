@@ -1,17 +1,16 @@
 ---
 // Imports Badges
-import BadgesInfo from "./badges/Badges-Info.astro";
-import BadgeWork from "./badges/Badge-work.astro";
+import BadgesInfo from "../components/badges/Badges-Info.astro";
+import BadgeWork from "../components/badges/Badge-work.astro";
 // Imports Icons
-import MailIcon from "./icons/Mail-Icon.astro";
-import TelegramIcon from "./icons/Telegram-Icon.astro";
-import GitHubIcon from "./icons/GitHub-Icon.astro";
-import DiscordIcon from "./icons/Discord-Icon.astro";
+import MailIcon from "../components/icons/Mail-Icon.astro";
+import TelegramIcon from "../components/icons/Telegram-Icon.astro";
+import GitHubIcon from "../components/icons/GitHub-Icon.astro";
+import DiscordIcon from "../components/icons/Discord-Icon.astro";
 //Import Images
 import ProfileAvatar1 from "../images/ReadyPlayerMe-Avatar (2).png";
 import { Image } from "astro:assets";
 ---
-<!-- Top -->
 <section class="flex flex-row gap-8 h-96">
   <!-- Col 1 -->
   <div class="flex basis-2/3 flex-col justify-center items-start">
@@ -20,7 +19,7 @@ import { Image } from "astro:assets";
     <h1 class="text-gray-900 text-6xl font-bold mb-8">Alex Sánchez</h1>
     <p class="text-lg text-gray-800 font-medium leading-6 mb-10">
       Ingeniero enfocado en el
-      <span class="text-purple-800 font-bold"
+      <span class="text-purple-800 font-bold font-mono"
         >Desarrollo Web Full Stack</span
       >
       con experiencia en análisis de datos.

@@ -1,16 +1,15 @@
 ---
 // Import main component
-import CardProject from "./Card-Project.astro";
+import CardProject from "../components/Card-Project.astro";
 // Imports Badges
-import BadgeCode from "./badges/Badge-Code.astro";
-import BadgePreview from "./badges/Badge-Preview.astro";
-import BadgeTemplate from "./badges/Badge-Template.astro";
+import BadgeCode from "../components/badges/Badge-Code.astro";
+import BadgePreview from "../components/badges/Badge-Preview.astro";
+import BadgeTemplate from "../components/badges/Badge-Template.astro";
 // Imports Icons
-import DjangoIcon from "./icons/Django-Icon.astro";
-import JsIcon from "./icons/Js-Icon.astro";
+import DjangoIcon from "../components/icons/Django-Icon.astro";
+import JsIcon from "../components/icons/Js-Icon.astro";
 // Imports Images
-import Project1_WEB from "/public/login.webp";
-
+import Project1_Img from "../images/project_1_maintenance_fms.webp";
 ---
 
 <!-- Projects -->
@@ -30,7 +29,7 @@ import Project1_WEB from "/public/login.webp";
           en JavaScript. Esto permite una mayor legibilidad 
           y organización del texto.
           `}
-          img= {Project1_WEB}
+          img= "src/images/project_1_maintenance_fms.webp"
           href_code="https://github.com"
           href_preview="https://lapalabradeldia.com"
         >

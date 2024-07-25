@@ -13,27 +13,18 @@ interface Props {
 const { title, body, img, href_code, href_preview } = Astro.props;
 ---
 
-<!-- CardProject.astro -->
-<article
-  class="group relative block h-64 sm:h-80 lg:h-96 shadow-lg overflow-hidden cursor-pointer"
->
-  <!-- Background image -->
-  <Image src={img} alt="Background-proyect-card" class="object-cover w-full h-full" loading="eager" width="400" height="400" quality="high"
-  />
+<!-- Card title -->
+<h2 class="p-3 text-2xl my-0 font-bold text-gray-100 bg-gray-800 rounded-t-md">
+  {title}
+</h2>
+<!-- Card content -->
+<article class="border-red-500 group relative shadow-lg cursor-pointer flex flex-col">
+  <!-- Background project image -->
+  <img src={img} alt="Background-proyect-card" />
 
-  <!-- Visible content of the card with blur effect -->
-    <div class="absolute inset-x-0 top-0 p-4 bg-gray-800 bg-opacity-30 backdrop-blur-lg transition-opacity group-hover:opacity-0 group-hover:visible">
-      <!-- Card title -->
-      <h2 class="text-2xl font-bold text-white">{title}</h2>
-    </div>
-
-
-  <!-- Content shown on hover -->
-  <div
-    class="absolute inset-0 p-10 opacity-0 transition-opacity group-hover:opacity-100"
-  >
+  <div class="absolute inset-0 p-10 opacity-0 transition-opacity group-hover:opacity-100">
     <!-- Semitransparent background to highlight text -->
-    <div class="bg-gray-100 bg-opacity-70 rounded-lg p-3 relative">
+    <div class="bg-gray-100 bg-opacity-90 rounded-lg p-3 relative">
       <!-- Flex container for preview and code badges -->
       <div class="flex flex-row gap-4 justify-start items-center">
         <!-- Slot for Preview badge -->
@@ -56,4 +47,6 @@ const { title, body, img, href_code, href_preview } = Astro.props;
       </div>
     </div>
   </div>
+
+  <!-- Content shown on hover -->
 </article>
