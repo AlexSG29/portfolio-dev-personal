@@ -20,13 +20,19 @@ import TailwindIcon from "../components/icons/Tailwind-Icon.astro"
 import ViteIcon from "../components/icons/Vite-Icon.astro"
 import GitHubIcon from "../components/icons/GitHub-Icon.astro"
 import AstroIcon from "../components/icons/Astro-Icon.astro"
+import BookIcon from "../components/icons/Book-icon.astro"
 // Imports Images
 import ProfileAvatar2 from "../images/ReadyPlayerMe-Avatar.png";
 import { Image } from "astro:assets"
 ---
 
-<section class="mb-20">
-  <h1 class="text-3xl font-bold text-gray-900 mb-10">Habilidades</h1>
+<section class="my-20">
+  <h1 class="flex flex-row items-center gap-2 text-4xl font-bold text-gray-900 mb-10">
+    <div class="w-12 h-12">
+      <BookIcon className="w-full h-full" />
+    </div>
+    Proyectos
+  </h1>
   <div class="flex flex-row items-stretch">
 
     <div class="flex flex-1 flex-col items-start justify-center font-medium text-base">
