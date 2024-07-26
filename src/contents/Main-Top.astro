@@ -11,13 +11,14 @@ import DiscordIcon from "../components/icons/Discord-Icon.astro";
 import ProfileAvatar1 from "../images/ReadyPlayerMe-Avatar (2).png";
 import { Image } from "astro:assets";
 ---
-<section class="flex flex-row gap-8 h-96">
+<section class="flex flex-col md:flex-row flex-grow gap-8">
+
   <!-- Col 1 -->
-  <div class="flex basis-2/3 flex-col justify-center items-start">
+  <div class="flex flex-col md:basis-2/3 justify-center md:items-start items-center order-2 md:order-1">
     <!-- Badge Available for work -->
     <BadgeWork />
-    <h1 class="text-gray-900 text-6xl font-bold mb-8">Alex Sánchez</h1>
-    <p class="text-lg text-gray-800 font-medium leading-7 mb-10">
+    <h1 class="text-gray-900 text-6xl font-bold mb-8 text-center md:text-start">Alex Sánchez</h1>
+    <p class="text-lg text-gray-800 font-medium leading-7 mb-10 text-center md:text-start">
       Engineer focused on 
       <span class="text-purple-800 font-bold font-mono bg-purple-100 p-1"
         >Full Stack</span
@@ -43,8 +44,10 @@ import { Image } from "astro:assets";
       </BadgesInfo>
     </div>
   </div>
+
   <!-- Col 2 -->
-  <div class="flex basis-1/3 justify-center items-center">
-    <Image src={ProfileAvatar1} alt="Avatar-profile" width="400" class="rounded-full" loading="eager"/>
+  <div class="flex flex-col md:flex-row md:basis-1/3 justify-center items-center order-1 md:order-2">
+    <Image src={ProfileAvatar1} alt="Avatar-profile" width="400" class="rounded-full mb-4 md:mb-0" loading="eager"/>
   </div>
+
 </section>

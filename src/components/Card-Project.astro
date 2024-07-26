@@ -15,13 +15,13 @@ const { title, body, img, href_code, href_preview } = Astro.props;
 
 
 <!-- Card content -->
-<article class="group relative shadow-lg cursor-auto flex flex-col">
+<article class="group relative shadow-lg cursor-auto flex flex-col ">
   <!-- Card title -->
   <h2 class="px-5 py-3 text-2xl my-0 font-bold text-gray-100 bg-gray-800 rounded-t-md">
     {title}
   </h2>
   <!-- Background project image container with fixed height -->
-  <div class="h-96 w-full overflow-hidden bg-gray-200 rounded-b-md">
+  <div class="h-[30rem] w-full overflow-hidden bg-gray-200 rounded-b-md">
     <img src={img} alt="Background-proyect-card" class="w-full h-full object-cover" />
   </div>
 
