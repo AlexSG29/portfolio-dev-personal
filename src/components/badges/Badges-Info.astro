@@ -18,14 +18,20 @@ const { href } = Astro.props;
         rounded-full
         border
         border-gray-300
+        dark:border-gray-700
         hover:border-purple-400
+        dark:hover:border-yellow-500
         bg-gray-100
+        dark:bg-gray-800
         hover:bg-purple-100
+        dark:hover:bg-yellow-600
         font-base
         hover:font-medium
         text-sm
         text-gray-800
+        dark:text-gray-200
         hover:text-purple-800
+        dark:hover:text-purple-200
         "
     href={href}
     target="_blank"
@@ -34,3 +40,4 @@ const { href } = Astro.props;
 >
     <slot />
 </a>
+

@@ -27,83 +27,87 @@ import { Image } from "astro:assets"
 ---
 
 <section class="my-20">
-  <h1 class="flex flex-row items-center gap-2 text-4xl font-bold text-gray-900 mb-10">
+  <h1 class="flex flex-row items-center gap-2 text-4xl font-bold text-gray-900 dark:text-gray-200 mb-10">
     <div class="w-12 h-12">
       <BookIcon className="w-full h-full" />
     </div>
-    Proyectos
+    Habilidades
   </h1>
   <div class="flex flex-row items-stretch">
 
     <div class="flex flex-1 flex-col items-start justify-center font-medium text-base">
-      <p>Lenguajes y Tecnologías</p>
+      <p class="text-gray-900 dark:text-gray-200">Lenguajes y Tecnologías</p>
       <div class="flex flex-row gap-3 flex-wrap mb-3">
-        <BadgeTemplate className="bg-blue-100 text-blue-900">
+        <BadgeTemplate className="bg-blue-100 text-blue-900 dark:bg-blue-600 dark:text-blue-100">
           <PythonIcon /> Python
         </BadgeTemplate>
-        <BadgeTemplate className="bg-yellow-100 text-yellow-900">
+        <BadgeTemplate className="bg-yellow-100 text-yellow-900 dark:bg-yellow-600 dark:text-yellow-100">
           <JsIcon /> JavaScript
         </BadgeTemplate>
-        <BadgeTemplate className="bg-orange-100 text-orange-900">
+        <BadgeTemplate className="bg-orange-100 text-orange-900 dark:bg-orange-600 dark:text-orange-100">
           <HTMLIcon /> HTML5
         </BadgeTemplate>
-        <BadgeTemplate className="bg-indigo-100 text-indigo-900">
+        <BadgeTemplate className="bg-indigo-100 text-indigo-900 dark:bg-indigo-600 dark:text-indigo-100">
           <CSSIcon /> CSS3
-        </BadgeTemplate>  
+        </BadgeTemplate>
+        
       </div>
 
-      <p>FrameWorks</p>
+      <p class="text-gray-900 dark:text-gray-200">FrameWorks</p>
       <div class="flex flex-row gap-3 flex-wrap mb-3">
-        <BadgeTemplate className="bg-green-100 text-green-900">
+        <BadgeTemplate className="bg-green-100 text-green-900 dark:bg-green-600 dark:text-green-100">
           <DjangoIcon /> Django
         </BadgeTemplate>
-        <BadgeTemplate className="bg-cyan-100 text-cyan-900">
+        <BadgeTemplate className="bg-cyan-100 text-cyan-900 dark:bg-cyan-600 dark:text-cyan-100">
           <TailwindIcon /> Tailwind
-        </BadgeTemplate> 
-        <BadgeTemplate className="bg-violet-100 text-violet-900">
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-violet-100 text-violet-900 dark:bg-violet-600 dark:text-violet-100">
           <BootsTrapIcon /> Bootstrap
-        </BadgeTemplate> 
-        <BadgeTemplate className="bg-pink-100 text-pink-900">
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-pink-100 text-pink-900 dark:bg-pink-600 dark:text-pink-100">
           <SassIcon /> Sass
-        </BadgeTemplate> 
-        <BadgeTemplate className="bg-fuchsia-100 text-fuchsia-900">
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-fuchsia-100 text-fuchsia-900 dark:bg-fuchsia-600 dark:text-fuchsia-100">
           <AstroIcon /> Astro
         </BadgeTemplate>
-        <BadgeTemplate className="bg-purple-100 text-purple-900">
+        <BadgeTemplate className="bg-purple-100 text-purple-900 dark:bg-purple-600 dark:text-purple-100">
           <ViteIcon /> Vite
         </BadgeTemplate>
+        
       </div>
       
-      <p>Herramientas</p>
+      <p class="text-gray-900 dark:text-gray-200">Herramientas</p>
       <div class="flex flex-row gap-3 flex-wrap mb-3">
-        <BadgeTemplate className="bg-orange-100 text-orange-900">
+        <BadgeTemplate className="bg-orange-100 text-orange-900 dark:bg-orange-600 dark:text-orange-100">
           <GitIcon /> Git
-        </BadgeTemplate> 
-        <BadgeTemplate className="bg-gray-100 text-gray-900">
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-gray-100 text-gray-900 dark:bg-gray-600 dark:text-gray-100">
           <GitHubIcon /> GitHub
-        </BadgeTemplate> 
-        <BadgeTemplate className="bg-sky-100 text-sky-900">
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-sky-100 text-sky-900 dark:bg-sky-600 dark:text-sky-100">
           <DockerIcon /> Docker
-        </BadgeTemplate> 
-        <BadgeTemplate className="bg-lime-100 text-lime-900">
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-lime-100 text-lime-900 dark:bg-lime-600 dark:text-lime-100">
           <NodeJsIcon /> Node.js
-        </BadgeTemplate> 
-        <BadgeTemplate className="bg-indigo-100 text-indigo-900">
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-indigo-100 text-indigo-900 dark:bg-indigo-600 dark:text-indigo-100">
           <VSCodeIcon /> VS Code
-        </BadgeTemplate> 
+        </BadgeTemplate>
+        
       </div>
 
-      <p>Actualmente Aprendiendo</p>
+      <p class="text-gray-900 dark:text-gray-200">Actualmente Aprendiendo</p>
       <div class="flex flex-row gap-3 flex-wrap mb-3">
-        <BadgeTemplate className="bg-sky-100 text-sky-900">
+        <BadgeTemplate className="bg-sky-100 text-sky-900 dark:bg-sky-600 dark:text-sky-100">
           <ReactIcon /> React
         </BadgeTemplate>
-        <BadgeTemplate className="bg-rose-100 text-rose-900">
+        <BadgeTemplate className="bg-rose-100 text-rose-900 dark:bg-rose-600 dark:text-rose-100">
           <KotlinIcon /> Kotlin
         </BadgeTemplate>
-        <BadgeTemplate className="bg-stone-100 text-stone-900">
+        <BadgeTemplate className="bg-stone-100 text-stone-900 dark:bg-stone-600 dark:text-stone-100">
           <NextIcon /> Next
         </BadgeTemplate>
+        
       </div>
       
     </div>
