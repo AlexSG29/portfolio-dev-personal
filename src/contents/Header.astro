@@ -1,5 +1,7 @@
 ---
 import ItemsHeader from "../components/Items-header.astro";
+import SunIcon  from "../components/icons/Sun-icon.astro";
+import MoonIcon  from "../components/icons/Moon-icon.astro";
 ---
 
 <header
@@ -11,14 +13,18 @@ import ItemsHeader from "../components/Items-header.astro";
   >
     <ItemsHeader>Proyectos</ItemsHeader>
     <ItemsHeader>Habilidades</ItemsHeader>
-    <button onclick="toggleDarkMode()">
-      <ItemsHeader>Dark Mode</ItemsHeader>
-    </button>
+    <ItemsHeader>
+      <button id="theme-toggle-button" onclick="toggleDarkMode()">
+        <div id="sun-icon"><SunIcon /></div>
+        <div id="moon-icon" style="display: none;"><MoonIcon /></div>
+      </button>
+    </ItemsHeader>
+    
   </div>
 </header>
 
 <script is:inline>
-  // function to change theme from light to dark
+  // function to toggle dark mode
   function toggleDarkMode() {
     const html = document.documentElement;
     const currentTheme = html.getAttribute("data-theme");
@@ -30,13 +36,30 @@ import ItemsHeader from "../components/Items-header.astro";
       html.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark");
     }
+    updateIcon(); // call the function to update the icon
   }
 
-  // aply saved theme on load page
+  function updateIcon() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+
+    if (currentTheme === "dark") {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    } else {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark"); // dark theme by default
     }
+    updateIcon(); // update the page
   });
 </script>
