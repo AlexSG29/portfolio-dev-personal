@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+// Import main component
+import CardProject from "../components/Card-Project.astro";
+// Imports Badges
+import BadgeCode from "../components/badges/Badge-Code.astro";
+import BadgePreview from "../components/badges/Badge-Preview.astro";
+import BadgeTemplate from "../components/badges/Badge-Template.astro";
+// Imports Icons
+import DjangoIcon from "../components/icons/Django-Icon.astro";
+import JsIcon from "../components/icons/Js-Icon.astro";
+---
+
+<Layout title="Projects">
+  <a href="./">Volver al inicio</a>
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+    <!-- Proyect 1 -->
+    <CardProject
+      title="Project 1"
+      body={`Aquí va la descripción del proyecto. 
+          Puedes escribir en varias líneas usando el 
+          operador de interpolación de cadenas (backticks) 
+          en JavaScript. Esto permite una mayor legibilidad 
+          y organización del texto.
+          `}
+      img="./src/images/imagen.png"
+      href_code="https://github.com"
+      href_preview="https://lapalabradeldia.com"
+    >
+      <BadgePreview slot="preview" />
+      <BadgeCode slot="code" />
+      <slot slot="technologies">
+        <BadgeTemplate className="bg-green-100 text-green-900">
+          <DjangoIcon /> Django
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+          <JsIcon /> Java Script
+        </BadgeTemplate>
+      </slot>
+    </CardProject>
+
+    <!-- Proyect 2 -->
+    <CardProject
+      title="Project 2"
+      body={`Aquí va la descripción del proyecto. 
+          Puedes escribir en varias líneas usando el 
+          operador de interpolación de cadenas (backticks) 
+          en JavaScript. Esto permite una mayor legibilidad 
+          y organización del texto.
+          `}
+      img="./src/images/imagen.png"
+      href_code="https://github.com"
+      href_preview="https://lapalabradeldia.com"
+    >
+      <BadgePreview slot="preview" />
+      <BadgeCode slot="code" />
+      <slot slot="technologies">
+        <BadgeTemplate className="bg-green-100 text-green-900">
+          <DjangoIcon /> Django
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+          <JsIcon /> Java Script
+        </BadgeTemplate>
+      </slot>
+    </CardProject>
+
+    <!-- Proyect 3 -->
+    <CardProject
+      title="Project 3"
+      body={`Aquí va la descripción del proyecto. 
+        Puedes escribir en varias líneas usando el 
+        operador de interpolación de cadenas (backticks) 
+        en JavaScript. Esto permite una mayor legibilidad 
+        y organización del texto.
+        `}
+      img="./src/images/imagen.png"
+      href_code="https://github.com"
+      href_preview="https://lapalabradeldia.com"
+    >
+      <BadgePreview slot="preview" />
+      <BadgeCode slot="code" />
+      <slot slot="technologies">
+        <BadgeTemplate className="bg-green-100 text-green-900">
+          <DjangoIcon /> Django
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+          <JsIcon /> Java Script
+        </BadgeTemplate>
+      </slot>
+    </CardProject>
+
+    <!-- Proyect 4 -->
+    <CardProject
+      title="Project 4"
+      body={`Aquí va la descripción del proyecto. 
+        Puedes escribir en varias líneas usando el 
+        operador de interpolación de cadenas (backticks) 
+        en JavaScript. Esto permite una mayor legibilidad 
+        y organización del texto.
+        `}
+      img="./src/images/imagen.png"
+      href_code="https://github.com"
+      href_preview="https://lapalabradeldia.com"
+    >
+      <BadgePreview slot="preview" />
+      <BadgeCode slot="code" />
+      <slot slot="technologies">
+        <BadgeTemplate className="bg-green-100 text-green-900">
+          <DjangoIcon /> Django
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+          <JsIcon /> Java Script
+        </BadgeTemplate>
+      </slot>
+    </CardProject>
+  </section>
+</Layout>
+  
+<style>
+  body {
+    width: 100%;
+    margin: 0 1.5rem;
+  }
+</style>
