@@ -8,8 +8,21 @@ import BadgeTemplate from "../components/badges/Badge-Template.astro";
 // Imports Icons
 import DjangoIcon from "../components/icons/Django-Icon.astro";
 import JsIcon from "../components/icons/Js-Icon.astro";
+import PromptIcon from "../components/icons/Prompt.astro";
 ---
 
+<h1 class="flex flex-row items-center gap-2 text-4xl font-bold text-gray-900 dark:text-gray-200 mt-8">
+  <div class="w-12 h-12">
+    <PromptIcon className="w-full h-full" />
+  </div>
+  Todos los proyectos
+</h1>
+
+<!-- Button to view all projects -->
+<a class="text-gray-100 bg-gray-800 hover:bg-gray-700 hover:cursor-pointer dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300 font-medium text-sm rounded-lg px-5 py-2.5 my-4 text-center inline-flex items-center"
+  href="./">
+  Regresar al incio
+</a>
 <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
   <!-- Proyect 1 -->
   <CardProject
