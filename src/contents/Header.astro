@@ -1,16 +1,24 @@
 ---
-import ItemsHeader from "../components/Items-header.astro";
-import SunIcon  from "../components/icons/Sun-icon.astro";
-import MoonIcon  from "../components/icons/Moon-icon.astro";
+import ItemsHeader from "@components/Items-header.astro";
+import SunIcon from "@components/icons/Sun-icon.astro";
+import MoonIcon from "@components/icons/Moon-icon.astro";
 ---
 
-<header class="flex flex-row justify-center h-16 items-center sticky top-0 z-10 transition-filter duration-300 ease-in-out">
+<header
+  class="flex flex-row justify-center h-16 items-center sticky top-0 z-10 transition-filter duration-300 ease-in-out"
+>
   <!-- items -->
-  <div class="flex flex-row items-center gap-4 text-sm max-w-fit bg-gray-100 bg-opacity-40 rounded-3xl py-2 px-6 fixed backdrop-blur-lg border-none dark:bg-gray-900 dark:bg-opacity-60 dark:text-gray-200">
+  <div
+    class="flex flex-row items-center gap-4 text-sm max-w-fit bg-gray-100 bg-opacity-40 rounded-3xl py-2 px-6 fixed backdrop-blur-lg border-none dark:bg-gray-900 dark:bg-opacity-60 dark:text-gray-200"
+  >
     <ItemsHeader>Proyectos</ItemsHeader>
     <ItemsHeader>Habilidades</ItemsHeader>
     <ItemsHeader>
-      <button id="theme-toggle-button" onclick="toggleDarkMode()" class="flex items-center justify-center">
+      <button
+        id="theme-toggle-button"
+        onclick="toggleDarkMode()"
+        class="flex items-center justify-center"
+      >
         <div id="sun-icon"><MoonIcon /></div>
         <div id="moon-icon" style="display: none;"><SunIcon /></div>
       </button>
@@ -18,43 +26,3 @@ import MoonIcon  from "../components/icons/Moon-icon.astro";
   </div>
 </header>
 
-<script is:inline>
-  // function to toggle dark mode
-  function toggleDarkMode() {
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute("data-theme");
-
-    if (currentTheme === "dark") {
-      html.removeAttribute("data-theme");
-      localStorage.setItem("theme", "light");
-    } else {
-      html.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
-    updateIcon(); // call the function to update the icon
-  }
-
-  function updateIcon() {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const sunIcon = document.getElementById('sun-icon');
-    const moonIcon = document.getElementById('moon-icon');
-
-    if (currentTheme === "dark") {
-      sunIcon.style.display = 'block';
-      moonIcon.style.display = 'none';
-    } else {
-      sunIcon.style.display = 'none';
-      moonIcon.style.display = 'block';
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark"); // dark theme by default
-    }
-    updateIcon(); // update the page
-  });
-</script>
