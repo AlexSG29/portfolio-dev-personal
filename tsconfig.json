@@ -15,9 +15,6 @@
       "@contents/*": [
         "src/contents/*"
       ],
-      "@scripts/*": [
-        "src/scripts/*"
-      ],
       "@images/*": [
         "src/images/*"
       ]
