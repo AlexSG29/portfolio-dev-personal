@@ -9,6 +9,9 @@ import BadgeTemplate from "@components/badges/Badge-Template.astro";
 import DjangoIcon from "@components/icons/Django-Icon.astro";
 import JsIcon from "@components/icons/Js-Icon.astro";
 import PromptIcon from "@components/icons/Prompt.astro";
+//Import Images
+import ProjectsImage from "@images/imagen.png";
+import { Image } from "astro:assets";
 ---
 
 <!-- Projects -->
@@ -37,7 +40,7 @@ import PromptIcon from "@components/icons/Prompt.astro";
           en JavaScript. Esto permite una mayor legibilidad 
           y organización del texto.
           `}
-      img="./src/images/imagen.png"
+      img={ProjectsImage}
       href_code="https://github.com"
       href_preview="https://lapalabradeldia.com"
     >
@@ -62,7 +65,7 @@ import PromptIcon from "@components/icons/Prompt.astro";
           en JavaScript. Esto permite una mayor legibilidad 
           y organización del texto.
           `}
-      img="./src/images/imagen.png"
+      img={ProjectsImage}
       href_code="https://github.com"
       href_preview="https://lapalabradeldia.com"
     >

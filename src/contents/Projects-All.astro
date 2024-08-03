@@ -9,6 +9,8 @@ import BadgeTemplate from "@components/badges/Badge-Template.astro";
 import DjangoIcon from "@components/icons/Django-Icon.astro";
 import JsIcon from "@components/icons/Js-Icon.astro";
 import PromptIcon from "@components/icons/Prompt.astro";
+// Import Images
+import ProjectsImage from "@images/imagen.png";
 ---
 
 <h1 class="flex flex-row items-center gap-2 text-4xl font-bold text-gray-900 dark:text-gray-200 mt-8">
@@ -33,7 +35,7 @@ import PromptIcon from "@components/icons/Prompt.astro";
           en JavaScript. Esto permite una mayor legibilidad 
           y organización del texto.
           `}
-    img="./src/images/imagen.png"
+    img={ProjectsImage}
     href_code="https://github.com"
     href_preview="https://lapalabradeldia.com"
   >
@@ -58,7 +60,7 @@ import PromptIcon from "@components/icons/Prompt.astro";
           en JavaScript. Esto permite una mayor legibilidad 
           y organización del texto.
           `}
-    img="./src/images/imagen.png"
+    img={ProjectsImage}
     href_code="https://github.com"
     href_preview="https://lapalabradeldia.com"
   >
@@ -83,7 +85,7 @@ import PromptIcon from "@components/icons/Prompt.astro";
         en JavaScript. Esto permite una mayor legibilidad 
         y organización del texto.
         `}
-    img="./src/images/imagen.png"
+    img={ProjectsImage}
     href_code="https://github.com"
     href_preview="https://lapalabradeldia.com"
   >
@@ -108,7 +110,57 @@ import PromptIcon from "@components/icons/Prompt.astro";
         en JavaScript. Esto permite una mayor legibilidad 
         y organización del texto.
         `}
-    img="./src/images/imagen.png"
+    img={ProjectsImage}
+    href_code="https://github.com"
+    href_preview="https://lapalabradeldia.com"
+  >
+    <BadgePreview slot="preview" />
+    <BadgeCode slot="code" />
+    <slot slot="technologies">
+      <BadgeTemplate className="bg-green-100 text-green-900">
+        <DjangoIcon /> Django
+      </BadgeTemplate>
+      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+        <JsIcon /> Java Script
+      </BadgeTemplate>
+    </slot>
+  </CardProject>
+
+  <!-- Proyect 5 -->
+  <CardProject
+    title="Project 5"
+    body={`Aquí va la descripción del proyecto. 
+        Puedes escribir en varias líneas usando el 
+        operador de interpolación de cadenas (backticks) 
+        en JavaScript. Esto permite una mayor legibilidad 
+        y organización del texto.
+        `}
+    img={ProjectsImage}
+    href_code="https://github.com"
+    href_preview="https://lapalabradeldia.com"
+  >
+    <BadgePreview slot="preview" />
+    <BadgeCode slot="code" />
+    <slot slot="technologies">
+      <BadgeTemplate className="bg-green-100 text-green-900">
+        <DjangoIcon /> Django
+      </BadgeTemplate>
+      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+        <JsIcon /> Java Script
+      </BadgeTemplate>
+    </slot>
+  </CardProject>
+
+  <!-- Proyect 6 -->
+  <CardProject
+    title="Project 6"
+    body={`Aquí va la descripción del proyecto. 
+        Puedes escribir en varias líneas usando el 
+        operador de interpolación de cadenas (backticks) 
+        en JavaScript. Esto permite una mayor legibilidad 
+        y organización del texto.
+        `}
+    img={ProjectsImage}
     href_code="https://github.com"
     href_preview="https://lapalabradeldia.com"
   >
