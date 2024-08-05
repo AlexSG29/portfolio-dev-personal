@@ -9,9 +9,15 @@ import SunFillIcon from "@components/icons/SunFill-icon.astro";
 <header class="flex flex-row justify-center h-16 items-center sticky top-0 z-10 transition-filter duration-300 ease-in-out">
   <!-- items -->
   <div class="flex flex-row items-center gap-4 text-sm max-w-fit bg-gray-100 bg-opacity-40 rounded-3xl py-2 px-6 fixed backdrop-blur-lg border-none dark:bg-gray-900 dark:bg-opacity-60 dark:text-gray-200">
-    <ItemsHeader>Projects</ItemsHeader>
-    <ItemsHeader>Skills</ItemsHeader>
-    <ItemsHeader>About Me</ItemsHeader>
+    <ItemsHeader>
+      <a href="#projects" class="header-link">Projects</a>
+    </ItemsHeader>
+    <ItemsHeader>
+      <a href="#skills" class="header-link">Skills</a>
+    </ItemsHeader>
+    <ItemsHeader>
+      <a href="#aboutme" class="header-link">About Me</a>
+    </ItemsHeader>
     <ItemsHeader>
       <button id="themeToggle" class="flex items-center justify-center">
         <div id="moon"><SunFillIcon /></div> <!-- moon is the sun with a fill -->
@@ -20,6 +26,42 @@ import SunFillIcon from "@components/icons/SunFill-icon.astro";
     </ItemsHeader>
   </div>
 </header>
+
+<!-- Script for Section Navigation -->
+<script>
+  document.addEventListener('astro:page-load', () => {
+  const links = document.querySelectorAll('.header-link');
+
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      
+      const target = event.target as HTMLElement;
+      const targetId = (target.getAttribute('href') || '').substring(1);
+      const currentUrl = window.location.pathname;
+
+      // Debugging
+      console.log(`Clicked link with href: ${target.getAttribute('href')}`);
+      console.log(`Target ID: ${targetId}`);
+
+      if (currentUrl === '/' || currentUrl === '/projects-all') {
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.log('Section not found, redirecting to index');
+          window.location.href = `/#${targetId}`;
+        }
+      } else {
+        console.log('Redirecting to index');
+        window.location.href = `/#${targetId}`;
+      }
+    });
+  });
+});
+</script>
+
 
 <!-- Script to toggle the theme -->
 <script>
