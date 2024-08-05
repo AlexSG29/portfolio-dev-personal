@@ -6,9 +6,9 @@ import BadgeWork from "@components/badges/Badge-work.astro";
 import MailIcon from "@components/icons/Mail-Icon.astro";
 import TelegramIcon from "@components/icons/Telegram-Icon.astro";
 import GitHubIcon from "@components/icons/GitHub-Icon.astro";
-import DiscordIcon from "@components/icons/Discord-Icon.astro";
+import BlogIcon from "@components/icons/Blog-icon.astro";
 //Import Images
-import ProfileAvatar1 from "../images/avatar-plano-corto.png";
+import ProfileAvatar1 from "@images/avatar-plano-corto.png";
 import { Image } from "astro:assets";
 ---
 <section class="flex flex-col md:flex-row flex-grow gap-8">
@@ -20,15 +20,15 @@ import { Image } from "astro:assets";
     <h1 class="text-gray-900 dark:text-gray-200 text-6xl font-bold mb-8 text-center md:text-start">Alex Sánchez</h1>
     <p class="text-lg text-gray-800 dark:text-gray-300 font-medium leading-7 mb-10 text-center md:text-start">
       Engineer focused on 
-      <span class="text-purple-800 dark:text-yellow-500 font-bold font-mono bg-purple-100 dark:bg-yellow-50 p-1"
-        >Full Stack</span
-      >
-      Web Development with experience in data analysis. 
+      <span class="text-purple-800 dark:text-yellow-500 font-bold font-mono bg-purple-100 dark:bg-yellow-50 p-1">
+        Full Stack
+      </span>
+      Web Development with experience in data analysis.
     </p>
     <div class="flex flex-row gap-x-4 gap-y-3 flex-wrap">
       <BadgesInfo href="mailto:alexander_sg29@outlook.com">
         <MailIcon />
-        Mándame un correo
+        Send me an email
       </BadgesInfo>
       <BadgesInfo href="https://github.com/AlexSG29">
         <GitHubIcon />
@@ -36,11 +36,11 @@ import { Image } from "astro:assets";
       </BadgesInfo>
       <BadgesInfo href="https://t.me/Alex_SG29">
         <TelegramIcon />
-        Contáctame
+        Contact me
       </BadgesInfo>
-      <BadgesInfo href="#">
-        <DiscordIcon />
-        Discord
+      <BadgesInfo href="https://blogcodewithme.netlify.app">
+        <BlogIcon />
+        Visit my blog
       </BadgesInfo>
     </div>
   </div>
