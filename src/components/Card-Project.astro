@@ -22,7 +22,7 @@ const { title, body, img, href_code, href_preview } = Astro.props;
   </h2>
   <!-- Background project image container with fixed height -->
   <div class="h-[30rem] w-full bg-gray-200">
-    <Image src={img} alt="project design" width={500} class="w-full h-full object-cover" loading="eager"/> 
+    <Image src={img} alt="project design" width={1620} height={1620} class="w-full h-full object-cover" loading="lazy"/> 
     <!-- <img src={img} alt="Background-proyect-card" class="w-full h-full object-cover" /> -->
   </div>
 
