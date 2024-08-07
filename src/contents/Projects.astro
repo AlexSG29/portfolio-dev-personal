@@ -1,17 +1,7 @@
 ---
-// Import main component
-import CardProject from "@components/Card-Project.astro";
-// Imports Badges
-import BadgeCode from "@components/badges/Badge-Code.astro";
-import BadgePreview from "@components/badges/Badge-Preview.astro";
-import BadgeTemplate from "@components/badges/Badge-Template.astro";
-// Imports Icons
-import DjangoIcon from "@components/icons/Django-Icon.astro";
-import JsIcon from "@components/icons/Js-Icon.astro";
 import PromptIcon from "@components/icons/Prompt.astro";
-//Import Images
-import ProjectsImage from "@images/imagen.png";
-import { Image } from "astro:assets";
+// Import Projects
+import FMS_Maintenance from "@components/projects/FMS_Maintenance.astro";
 ---
 
 <!-- Projects -->
@@ -20,65 +10,20 @@ import { Image } from "astro:assets";
     <div class="w-12 h-12">
       <PromptIcon className="w-full h-full" />
     </div>
-    Projects
+    Proyectos
   </h1>
 
   <!-- Button to view all projects -->
-  <a class="text-gray-100 bg-gray-800 hover:bg-gray-700 hover:cursor-pointer dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300 font-medium text-sm rounded-lg px-5 py-2.5 my-5 text-center inline-flex items-center"
-    href="projects-all">
-    See all projects
+  <a 
+    class="text-gray-100 bg-gray-800 hover:bg-gray-700 hover:cursor-pointer dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300 font-medium text-sm rounded-lg px-5 py-2.5 my-5 text-center inline-flex items-center"
+    href="projects-all"
+  >
+    Ver más proyectos
   </a>
 
   <!-- Grid container for projects -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <!-- Proyect 1 -->
-    <CardProject
-      title="Project 1"
-      body={`Aquí va la descripción del proyecto. 
-          Puedes escribir en varias líneas usando el 
-          operador de interpolación de cadenas (backticks) 
-          en JavaScript. Esto permite una mayor legibilidad 
-          y organización del texto.
-          `}
-      img={ProjectsImage}
-      href_code="https://github.com"
-      href_preview="https://lapalabradeldia.com"
-    >
-      <BadgePreview slot="preview" />
-      <BadgeCode slot="code" />
-      <slot slot="technologies">
-        <BadgeTemplate className="bg-green-100 text-green-900">
-          <DjangoIcon /> Django
-        </BadgeTemplate>
-        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-          <JsIcon /> Java Script
-        </BadgeTemplate>
-      </slot>
-    </CardProject>
-
-    <!-- Proyect 2 -->
-    <CardProject
-      title="Project 2"
-      body={`Aquí va la descripción del proyecto. 
-          Puedes escribir en varias líneas usando el 
-          operador de interpolación de cadenas (backticks) 
-          en JavaScript. Esto permite una mayor legibilidad 
-          y organización del texto.
-          `}
-      img={ProjectsImage}
-      href_code="https://github.com"
-      href_preview="https://lapalabradeldia.com"
-    >
-      <BadgePreview slot="preview" />
-      <BadgeCode slot="code" />
-      <slot slot="technologies">
-        <BadgeTemplate className="bg-green-100 text-green-900">
-          <DjangoIcon /> Django
-        </BadgeTemplate>
-        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-          <JsIcon /> Java Script
-        </BadgeTemplate>
-      </slot>
-    </CardProject>
+    <FMS_Maintenance />
   </div>
 </section>

@@ -9,6 +9,7 @@ import BadgeTemplate from "@components/badges/Badge-Template.astro";
 import DjangoIcon from "@components/icons/Django-Icon.astro";
 import JsIcon from "@components/icons/Js-Icon.astro";
 import PromptIcon from "@components/icons/Prompt.astro";
+import BootsTrapIcon from "@components/icons/BootsTrap-Icon.astro";
 // Import Images
 import ProjectsImage from "@images/imagen.png";
 ---
@@ -17,162 +18,43 @@ import ProjectsImage from "@images/imagen.png";
   <div class="w-12 h-12">
     <PromptIcon className="w-full h-full" />
   </div>
-  All projects
+  Proyectos
 </h1>
 
 <!-- Button to view all projects -->
 <a class="text-gray-100 bg-gray-800 hover:bg-gray-700 hover:cursor-pointer dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300 font-medium text-sm rounded-lg px-5 py-2.5 my-4 text-center inline-flex items-center"
   href="/">
-  Back to home
+  Regresar al inicio
 </a>
 <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
   <!-- Proyect 1 -->
   <CardProject
-    title="Project 1"
-    body={`Aquí va la descripción del proyecto. 
-          Puedes escribir en varias líneas usando el 
-          operador de interpolación de cadenas (backticks) 
-          en JavaScript. Esto permite una mayor legibilidad 
-          y organización del texto.
-          `}
-    img={ProjectsImage}
-    href_code="https://github.com"
-    href_preview="https://lapalabradeldia.com"
-  >
-    <BadgePreview slot="preview" />
-    <BadgeCode slot="code" />
-    <slot slot="technologies">
-      <BadgeTemplate className="bg-green-100 text-green-900">
-        <DjangoIcon /> Django
-      </BadgeTemplate>
-      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-        <JsIcon /> Java Script
-      </BadgeTemplate>
-    </slot>
-  </CardProject>
-
-  <!-- Proyect 2 -->
-  <CardProject
-    title="Project 2"
-    body={`Aquí va la descripción del proyecto. 
-          Puedes escribir en varias líneas usando el 
-          operador de interpolación de cadenas (backticks) 
-          en JavaScript. Esto permite una mayor legibilidad 
-          y organización del texto.
-          `}
-    img={ProjectsImage}
-    href_code="https://github.com"
-    href_preview="https://lapalabradeldia.com"
-  >
-    <BadgePreview slot="preview" />
-    <BadgeCode slot="code" />
-    <slot slot="technologies">
-      <BadgeTemplate className="bg-green-100 text-green-900">
-        <DjangoIcon /> Django
-      </BadgeTemplate>
-      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-        <JsIcon /> Java Script
-      </BadgeTemplate>
-    </slot>
-  </CardProject>
-
-  <!-- Proyect 3 -->
-  <CardProject
-    title="Project 3"
-    body={`Aquí va la descripción del proyecto. 
-        Puedes escribir en varias líneas usando el 
-        operador de interpolación de cadenas (backticks) 
-        en JavaScript. Esto permite una mayor legibilidad 
-        y organización del texto.
-        `}
-    img={ProjectsImage}
-    href_code="https://github.com"
-    href_preview="https://lapalabradeldia.com"
-  >
-    <BadgePreview slot="preview" />
-    <BadgeCode slot="code" />
-    <slot slot="technologies">
-      <BadgeTemplate className="bg-green-100 text-green-900">
-        <DjangoIcon /> Django
-      </BadgeTemplate>
-      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-        <JsIcon /> Java Script
-      </BadgeTemplate>
-    </slot>
-  </CardProject>
-
-  <!-- Proyect 4 -->
-  <CardProject
-    title="Project 4"
-    body={`Aquí va la descripción del proyecto. 
-        Puedes escribir en varias líneas usando el 
-        operador de interpolación de cadenas (backticks) 
-        en JavaScript. Esto permite una mayor legibilidad 
-        y organización del texto.
-        `}
-    img={ProjectsImage}
-    href_code="https://github.com"
-    href_preview="https://lapalabradeldia.com"
-  >
-    <BadgePreview slot="preview" />
-    <BadgeCode slot="code" />
-    <slot slot="technologies">
-      <BadgeTemplate className="bg-green-100 text-green-900">
-        <DjangoIcon /> Django
-      </BadgeTemplate>
-      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-        <JsIcon /> Java Script
-      </BadgeTemplate>
-    </slot>
-  </CardProject>
-
-  <!-- Proyect 5 -->
-  <CardProject
-    title="Project 5"
-    body={`Aquí va la descripción del proyecto. 
-        Puedes escribir en varias líneas usando el 
-        operador de interpolación de cadenas (backticks) 
-        en JavaScript. Esto permite una mayor legibilidad 
-        y organización del texto.
-        `}
-    img={ProjectsImage}
-    href_code="https://github.com"
-    href_preview="https://lapalabradeldia.com"
-  >
-    <BadgePreview slot="preview" />
-    <BadgeCode slot="code" />
-    <slot slot="technologies">
-      <BadgeTemplate className="bg-green-100 text-green-900">
-        <DjangoIcon /> Django
-      </BadgeTemplate>
-      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-        <JsIcon /> Java Script
-      </BadgeTemplate>
-    </slot>
-  </CardProject>
-
-  <!-- Proyect 6 -->
-  <CardProject
-    title="Project 6"
-    body={`Aquí va la descripción del proyecto. 
-        Puedes escribir en varias líneas usando el 
-        operador de interpolación de cadenas (backticks) 
-        en JavaScript. Esto permite una mayor legibilidad 
-        y organización del texto.
-        `}
-    img={ProjectsImage}
-    href_code="https://github.com"
-    href_preview="https://lapalabradeldia.com"
-  >
-    <BadgePreview slot="preview" />
-    <BadgeCode slot="code" />
-    <slot slot="technologies">
-      <BadgeTemplate className="bg-green-100 text-green-900">
-        <DjangoIcon /> Django
-      </BadgeTemplate>
-      <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-        <JsIcon /> Java Script
-      </BadgeTemplate>
-    </slot>
+      title="Sistema de Gestión de Flotas"
+      body={`
+      FMS o Fleet Management System es un sistema web de gestión de flotas 🚛 
+      para mantenimiento, que organiza y gestiona mantenimientos 🛠️,
+      repuestos 🧩, proveedores 📞, y vehículos 🚗. Ofrece 
+      funcionalidades como cronograma de mantenimiento 📅, 
+      informes en PDF 📝, y un dashboard 📊 para una visión 
+      general de las actividades y estado de los vehículos.
+      `
+      }
+      img={ProjectsImage}
+      href_code="https://github.com/AlexSG29/Envia_FMS"
+      href_preview="https://alexsg29.pythonanywhere.com"
+    >
+      <BadgePreview slot="preview" />
+      <BadgeCode slot="code" />
+      <slot slot="technologies">
+        <BadgeTemplate className="bg-green-100 text-green-900">
+          <DjangoIcon /> Django
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+          <JsIcon /> JavaScript
+        </BadgeTemplate>
+        <BadgeTemplate className="bg-violet-100 text-violet-900">
+          <BootsTrapIcon /> Bootstrap
+        </BadgeTemplate>
+      </slot>
   </CardProject>
 </section>

@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 
 interface Props {
   title: string;
-  body: string;
+  body: any;
   img: any;
   href_code: string;
   href_preview: string;
@@ -32,9 +32,9 @@ const { title, body, img, href_code, href_preview } = Astro.props;
       <!-- Flex container for preview and code badges -->
       <div class="flex flex-row gap-4 justify-start items-center">
         <!-- Slot for Preview badge -->
-        <a href={href_preview}><slot name="preview" /></a>
+        <a href={href_preview} target="_blank"><slot name="preview" /></a>
         <!-- Slot for Code badge -->
-        <a href={href_code}><slot name="code" /></a>
+        <a href={href_code} target="_blank"><slot name="code" /></a>
       </div>
       <!-- Title of the content on hover -->
       <h3 class="text-2xl font-bold text-gray-800">{title}</h3>
