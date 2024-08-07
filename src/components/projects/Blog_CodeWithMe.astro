@@ -1,0 +1,37 @@
+---
+// Import main component
+import CardProject from "@components/Card-Project.astro";
+// Imports Badges
+import BadgeCode from "@components/badges/Badge-Code.astro";
+import BadgePreview from "@components/badges/Badge-Preview.astro";
+import BadgeTemplate from "@components/badges/Badge-Template.astro";
+// Imports Icons
+import JsIcon from "@components/icons/Js-Icon.astro";
+import AstroIcon from "@components/icons/Astro-Icon.astro";
+//Import Images
+import ProjectsImage from "@images/blog_design_codewithme.png";
+---
+
+<CardProject
+  title="Sistema de Gestión de Flotas"
+  body={`
+  Este blog es un espacio donde comparto experiencias y cosas que me he encontrado 
+  en mi proceso de convertirme en desarrollador web. Utilizo archivos Markdown por 
+  su rapidez y simplicidad, y construyo el blog con Astro, un framework que facilita 
+  la creación de sitios web rápidos y eficientes.
+  `}
+  img={ProjectsImage}
+  href_code="https://github.com/AlexSG29/blog_static_personal.git"
+  href_preview="https://blogcodewithme.netlify.app/"
+>
+  <BadgePreview slot="preview" />
+  <BadgeCode slot="code" />
+  <slot slot="technologies">
+    <BadgeTemplate className="bg-fuchsia-100 text-fuchsia-900">
+      <AstroIcon /> Astro
+    </BadgeTemplate>
+    <BadgeTemplate className="bg-yellow-100 text-yellow-700">
+      <JsIcon /> JavaScript
+    </BadgeTemplate>
+  </slot>
+</CardProject>

@@ -1,17 +1,8 @@
 ---
-// Import main component
-import CardProject from "@components/Card-Project.astro";
-// Imports Badges
-import BadgeCode from "@components/badges/Badge-Code.astro";
-import BadgePreview from "@components/badges/Badge-Preview.astro";
-import BadgeTemplate from "@components/badges/Badge-Template.astro";
-// Imports Icons
-import DjangoIcon from "@components/icons/Django-Icon.astro";
-import JsIcon from "@components/icons/Js-Icon.astro";
 import PromptIcon from "@components/icons/Prompt.astro";
-import BootsTrapIcon from "@components/icons/BootsTrap-Icon.astro";
-// Import Images
-import ProjectsImage from "@images/imagen.png";
+// Import Projects All
+import FMS_Maintenance from "@components/projects/FMS_Maintenance.astro";
+import BlogCodeWithMe from "@components/projects/Blog_CodeWithMe.astro";
 ---
 
 <h1 class="flex flex-row items-center gap-2 text-4xl font-bold text-gray-900 dark:text-gray-200 mt-8">
@@ -27,34 +18,6 @@ import ProjectsImage from "@images/imagen.png";
   Regresar al inicio
 </a>
 <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
-  <!-- Proyect 1 -->
-  <CardProject
-      title="Sistema de Gestión de Flotas"
-      body={`
-      FMS o Fleet Management System es un sistema web de gestión de flotas 🚛 
-      para mantenimiento, que organiza y gestiona mantenimientos 🛠️,
-      repuestos 🧩, proveedores 📞, y vehículos 🚗. Ofrece 
-      funcionalidades como cronograma de mantenimiento 📅, 
-      informes en PDF 📝, y un dashboard 📊 para una visión 
-      general de las actividades y estado de los vehículos.
-      `
-      }
-      img={ProjectsImage}
-      href_code="https://github.com/AlexSG29/Envia_FMS"
-      href_preview="https://alexsg29.pythonanywhere.com"
-    >
-      <BadgePreview slot="preview" />
-      <BadgeCode slot="code" />
-      <slot slot="technologies">
-        <BadgeTemplate className="bg-green-100 text-green-900">
-          <DjangoIcon /> Django
-        </BadgeTemplate>
-        <BadgeTemplate className="bg-yellow-100 text-yellow-700">
-          <JsIcon /> JavaScript
-        </BadgeTemplate>
-        <BadgeTemplate className="bg-violet-100 text-violet-900">
-          <BootsTrapIcon /> Bootstrap
-        </BadgeTemplate>
-      </slot>
-  </CardProject>
+  <FMS_Maintenance />
+  <BlogCodeWithMe />
 </section>
